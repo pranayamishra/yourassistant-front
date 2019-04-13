@@ -21,11 +21,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="oncall-services.html">On Call Services</a></li>                
-                <li><a href="course-detail.html">Partner English Speaking Services</a></li>
-                <li><a href="course-detail.html">Premium Personal Services</a></li> 
+                <li><a routerLink="/services/oncall">On Call Services</a></li>                
+                <li><a routerLink="services/partnerservice">Partner English Speaking Services</a></li>
+                <!-- <li><a href="course-detail.html">Premium Personal Services</a></li> 
                 <li><a href="free-online-services.html">Free Online Services</a></li>   
-                <li><a href="#">Premium Online Services</a></li>                
+                <li><a href="#">Premium Online Services</a></li>                 -->
               </ul>
             </li>           
 <!--             <li><a href="gallery.html">Gallery</a></li> -->
@@ -36,16 +36,28 @@
 <!--                 <li><a href="blog-single.html">Blog Single</a></li>                 -->
 <!--               </ul> -->
 <!--             </li>             -->
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful Information and Links <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="english-news.html">News in English</a></li>                
               </ul>
-            </li>   
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
+            </li>    -->
+            <li><a routerLink="/contact">Contact</a></li>
+            <!-- <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li> -->
+            <li class="dropdown">
+              					<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<span class="fa fa-angle-down"></span></a>
+              					<ul class="dropdown-menu" role="menu">
+                					<li><a routerLink="account/customeraccount">My Account</a></li> 
+                					<li><a routerLink="/login">My Account Login</a></li> 
+                					<li><a href="#">Logout</a></li>
+                             	</ul>
+           	</li>     
+            <li><a routerLink="/imprint">Imprint</a></li>
+
           </ul>                     
         </div><!--/.nav-collapse -->        
       </div>     
     </nav>
   </section>
+
+
