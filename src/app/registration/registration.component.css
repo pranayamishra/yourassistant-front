@@ -1,0 +1,67 @@
+#mu-registration {
+  display: inline;
+  float: left;
+  padding: 100px 0;
+  width: 100%;
+}
+
+#mu-registration .mu-registration-area {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-registration .mu-registration-area .mu-registration-content {
+  display: inline;
+  float: left;
+  margin-top: 50px;
+  width: 100%;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform .reply-title {
+  font-size: 25px;
+  margin-top: 0;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform label {
+  display: block;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform label .required {
+  color: #f60;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform input[type="text"],
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform input[type="password"] 
+
+{
+  border: none;
+  border: 1px solid #ddd;
+  color: #555;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform .form-submit input {
+  margin-top: 10px;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-right {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-registration .mu-registration-area .mu-registration-content .mu-registration-right iframe {
+  height: 500px;
+}

@@ -15,6 +15,9 @@ import { OncallComponent } from './services/oncall/oncall.component';
 import { PartnerserviceComponent } from './services/partnerservice/partnerservice.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
+import { PersonaldataComponent } from './account/personaldata/personaldata.component';
+import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
+import { NavbarComponent } from './account/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { CustomeraccountComponent } from './account/customeraccount/customeracco
     OncallComponent,
     PartnerserviceComponent,
     ImprintComponent,
-    CustomeraccountComponent
+    CustomeraccountComponent,
+    PersonaldataComponent,
+    ChangepasswordComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

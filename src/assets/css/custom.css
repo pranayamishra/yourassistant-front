@@ -15,147 +15,88 @@
 	
 }
 
-/*==================
- LOGIN PAGE
+*==================
+ SLIDER SECTION
 ====================*/
-#mu-login {
-  display: inline;
-  float: left;
-  padding: 100px 0;
-  width: 100%;
-}
-#mu-login .mu-login-area {
+#mu-slider {
   display: inline;
   float: left;
   width: 100%;
 }
-#mu-login .mu-login-area .mu-login-content {
-  display: inline;
-  float: left;
-  margin-top: 50px;
-  width: 100%;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-left {
+#mu-slider .mu-slider-single {
   display: inline;
   float: left;
   width: 100%;
+  position: relative;
 }
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform {
+#mu-slider .mu-slider-single .mu-slider-img {
   display: inline;
   float: left;
   width: 100%;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform .reply-title {
-  font-size: 25px;
-  margin-top: 0;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform label {
-  display: block;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform label .required {
-  color: #f60;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform input[type="text"],
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform input[type="password"] 
-
-{
-  border: none;
-  border: 1px solid #ddd;
-  color: #555;
-  margin-bottom: 10px;
-  height: 35px;
-  padding: 5px;
-  width: 50%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#mu-login .mu-login-area .mu-login-content .mu-login-left .loginform .form-submit input {
-  margin-top: 10px;
-}
-#mu-contact .mu-login-area .mu-login-content .mu-login-right {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-login .mu-login-area .mu-login-content .mu-login-right iframe {
   height: 500px;
 }
-
-
-
-/*==================
- REGISTRATION PAGE
-====================*/
-#mu-registration {
-  display: inline;
-  float: left;
-  padding: 100px 0;
+#mu-slider .mu-slider-single .mu-slider-img:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#mu-slider .mu-slider-single .mu-slider-img figure {
+  height: 100%;
   width: 100%;
 }
-#mu-registration .mu-registration-area {
-  display: inline;
-  float: left;
+#mu-slider .mu-slider-single .mu-slider-img figure img {
   width: 100%;
+  height: 100%;
 }
-#mu-registration .mu-registration-area .mu-registration-content {
-  display: inline;
-  float: left;
-  margin-top: 50px;
+#mu-slider .mu-slider-single .mu-slider-content {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  padding: 0 15%;
   width: 100%;
+  text-align: center;
+  height: 100%;
 }
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left {
-  display: inline;
-  float: left;
-  width: 100%;
+#mu-slider .mu-slider-single .mu-slider-content h4 {
+  letter-spacing: 1px;
+  margin-bottom: 0;
 }
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform {
-  display: inline;
-  float: left;
-  width: 100%;
+#mu-slider .mu-slider-single .mu-slider-content span {
+  display: inline-block;
+  height: 1px;
+  width: 100px;
 }
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform .reply-title {
-  font-size: 25px;
-  margin-top: 0;
-}
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform label {
-  display: block;
-}
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform label .required {
-  color: #f60;
-}
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform input[type="text"],
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform input[type="password"] 
-
-{
-  border: none;
-  border: 1px solid #ddd;
-  color: #555;
+#mu-slider .mu-slider-single .mu-slider-content h2 {
+  font-size: 50px;
+  line-height: 80px;
   margin-bottom: 10px;
-  height: 35px;
-  padding: 5px;
-  width: 100%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+}
+#mu-slider .mu-slider-single .mu-slider-content p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+#mu-slider .mu-slider-single .mu-slider-content a {
+  margin-top: 25px;
+}
+#mu-slider .slick-prev,
+#mu-slider .slick-next {
+  height: 60px;
+  width: 60px;
+}
+#mu-slider .slick-prev:before,
+#mu-slider .slick-next:before {
+  color: #fff;
+  font-size: 25px;
 }
 
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-left .registrationform .form-submit input {
-  margin-top: 10px;
-}
-#mu-contact .mu-registration-area .mu-registration-content .mu-registration-right {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-registration .mu-registration-area .mu-registration-content .mu-registration-right iframe {
-  height: 500px;
-}
+
 
 /*==================
  CUSTOMER PROFILE PAGE
@@ -229,6 +170,152 @@
 }
 
 /*==================
- MY ACCOUNT PAGE
+ NAVBAR SECTION
 ====================*/
+#mu-menu {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-menu .navbar-header .navbar-brand {
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
+  letter-spacing: 0.5px;
+}
+#mu-menu .navbar-header .navbar-brand i {
+  font-size: 35px;
+}
+#mu-menu .navbar-header .navbar-brand span {
+  margin-left: 4px;
+}
+#mu-menu .navbar-default {
+  background-color: #fff;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 0px;
+}
+#mu-menu .navbar-default .navbar-nav li > a {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  margin-bottom: -1px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#mu-menu .navbar-default .navbar-nav li #mu-search-icon:hover, #mu-menu .navbar-default .navbar-nav li #mu-search-icon:focus {
+  border: none;
+}
+#mu-menu .navbar-default .navbar-nav li .dropdown-menu {
+  border-radius: 0px;
+}
+#mu-menu .navbar-default .navbar-nav li .dropdown-menu li a {
+  color: #333333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#mu-menu .navbar-default .navbar-nav li .dropdown-menu li a:hover, #mu-menu .navbar-default .navbar-nav li .dropdown-menu li a:focus {
+  color: #fff;
+}
+#mu-menu .navbar-default .navbar-nav .open a:hover, #mu-menu .navbar-default .navbar-nav .open a:focus {
+  color: #fff;
+}
 
+/* ALL SECTION */
+/*scrol to top*/
+.scrollToTop {
+  border-radius: 4px;
+  bottom: 60px;
+  color: #fff;
+  display: none;
+  font-size: 30px;
+  line-height: 50px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 0;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  z-index: 999;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.scrollToTop i {
+  display: block;
+}
+.scrollToTop span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus {
+  color: #fff;
+}
+
+#mu-search {
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%) scale(0);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  width: 100%;
+  z-index: 99999;
+}
+#mu-search .mu-search-area {
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 20% 0;
+  text-align: center;
+}
+#mu-search .mu-search-area .mu-search-close {
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 25px;
+  outline: none;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 100px;
+  text-align: center;
+  top: 50px;
+  width: 50px;
+}
+#mu-search .mu-search-area .mu-search-form input[type="search"] {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  height: 100px;
+  outline: medium none;
+  text-align: center;
+  width: 100%;
+}
+
+#mu-search.mu-search-open {
+  transform: translateY(0) scale(1);
+}

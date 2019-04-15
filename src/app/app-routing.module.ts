@@ -9,7 +9,8 @@ import {OncallComponent } from './services/oncall/oncall.component';
 import { PartnerserviceComponent } from './services/partnerservice/partnerservice.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
-
+import { PersonaldataComponent } from './account/personaldata/personaldata.component';
+import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
 
 
 
@@ -54,6 +55,16 @@ const routes: Routes = [
      {
         path: 'account/customeraccount',
         component: CustomeraccountComponent,
+        pathMatch: 'full'
+    },
+     {
+        path: 'account/customeraccount/personaldata',
+        component: PersonaldataComponent,
+        pathMatch: 'full'
+    },
+     {
+        path: 'account/customeraccount/changepassword',
+        component: ChangepasswordComponent,
         pathMatch: 'full'
     },
     // my account end
