@@ -11,7 +11,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
 import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
-
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -55,7 +55,8 @@ const routes: Routes = [
      {
         path: 'account/customeraccount',
         component: CustomeraccountComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+        canActivate: [AuthGuard]
     },
      {
         path: 'account/customeraccount/personaldata',
