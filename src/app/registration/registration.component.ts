@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RegistrationService } from '../registration.service';
+import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 
-    constructor(private registrationService: RegistrationService, private router: Router, private formBuilder: FormBuilder) { }
+    constructor(private userService: UserService, private router: Router, private formBuilder: FormBuilder) { }
     registrationForm: FormGroup;
     isSubmitted = false;
     ngOnInit() {
@@ -28,7 +28,7 @@ export class RegistrationComponent implements OnInit {
         if (this.registrationForm.invalid) {
             return;
         }
-        this.registrationService.register(this.registrationForm.value);
+        this.userService.register(this.registrationForm.value);
         this.router.navigateByUrl('');
     }
     get formControls() { return this.registrationForm.controls; }
