@@ -17,13 +17,16 @@
                             <div class="col-md-6">
                                 <div class="mu-customer_profile-left">
                                     <form [formGroup]="customerProfileForm" class="customer_profileform" (ngSubmit)="save()">
-                                    <p class="comment-form-author">
+                                    <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.gender.errors }">
                                         <label for="gender">Gender <span class="required">*</span></label>
                                         <select formControlName="gender">
                                             <option value="male">Male</option>
-                                            <option value="saab">Female</option>
+                                            <option value="female">Female</option>
                                         </select>
                                     </p>
+                                    <div *ngIf="isSubmitted && formControls.gender.errors" class="help-block">
+                                        <div *ngIf="formControls.gender.errors.required">Gender is required!</div>
+                                    </div>
                                     <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.firstName.errors }">
                                         <label for="firstName">First Name <span class="required">*</span></label>
                                         <input type="text" placeholder="" formControlName="firstName">
@@ -41,8 +44,44 @@
                                         <div *ngIf="formControls.lastName.errors.required">Last Name is required
                                         </div>
                                     </div>
+                                    <div formGroupName="address">
+                                    <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.street.errors }">
+                                        <label for="street">Street <span class="required">*</span></label>
+                                        <input type="text" placeholder="" formControlName="street">
+                                    </p>
+                                    <div *ngIf="isSubmitted && formControls.street.errors" class="help-block">
+                                        <div *ngIf="formControls.street.errors.required">Street is required
+                                        </div>
+                                    </div>
 
+                                    <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.houseNumber.errors }">
+                                        <label for="houseNumber">House Number <span class="required">*</span></label>
+                                        <input type="text" placeholder="" formControlName="houseNumber">
+                                    </p>
+                                    <div *ngIf="isSubmitted && formControls.houseNumber.errors" class="help-block">
+                                        <div *ngIf="formControls.houseNumber.errors.required">House Number is required
+                                        </div>
+                                    </div>
 
+                                     <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.zip.errors }">
+                                        <label for="zip">Zip (PLZ) <span class="required">*</span></label>
+                                        <input type="text" placeholder="" formControlName="zip">
+                                    </p>
+                                    <div *ngIf="isSubmitted && formControls.zip.errors" class="help-block">
+                                        <div *ngIf="formControls.zip.errors.required">Zip is required
+                                        </div>
+                                    </div>
+
+                                     <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.city.errors }">
+                                        <label for="zip">City <span class="required">*</span></label>
+                                        <input type="text" placeholder="" formControlName="city">
+                                    </p>
+                                    <div *ngIf="isSubmitted && formControls.city.errors" class="help-block">
+                                        <div *ngIf="formControls.city.errors.required">City is required
+                                        </div>
+                                    </div>
+
+                                    </div>
                                     <p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
                                         <label for="email">My Email <span class="required">*</span></label>
                                         <input type="email" placeholder="" formControlName="email">

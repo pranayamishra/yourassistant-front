@@ -12,7 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DefaultComponent } from './default/default.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { OncallComponent } from './services/oncall/oncall.component';
+import { ForeignersofficeComponent } from './services/foreignersoffice/foreignersoffice.component';
 import { PartnerserviceComponent } from './services/partnerservice/partnerservice.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
@@ -31,7 +31,7 @@ import { NavbarComponent } from './account/navbar/navbar.component';
     DefaultComponent,
     LoginComponent,
     RegistrationComponent,
-    OncallComponent,
+    ForeignersofficeComponent,
     PartnerserviceComponent,
     ImprintComponent,
     CustomeraccountComponent,

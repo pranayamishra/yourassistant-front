@@ -18,6 +18,12 @@ export class PersonaldataComponent implements OnInit {
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             email: ['', Validators.required],
+            address: {
+                street: ['', Validators.required],
+                houseNumber: ['', Validators.required],
+                zip: ['', Validators.required],
+                city: ['', Validators.required]
+            }
         });
     }
     save() {

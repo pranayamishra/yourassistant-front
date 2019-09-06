@@ -20,12 +20,9 @@ export class ChangepasswordComponent implements OnInit {
         });
     }
     changePassword() {
-        window.alert('hi');
 
         this.isSubmitted = true;
         if (this.changePasswordForm.invalid) {
-            window.alert('inside');
-
             return;
         }
         this.userService.changePassword(this.changePasswordForm.value);
