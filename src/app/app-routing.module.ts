@@ -6,7 +6,7 @@ import {DefaultComponent} from './default/default.component';
 import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {ForeignersofficeComponent } from './services/foreignersoffice/foreignersoffice.component';
-import { PartnerserviceComponent } from './services/partnerservice/partnerservice.component';
+import { PublicserviceComponent } from './services/publicservice/publicservice.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
@@ -47,8 +47,8 @@ const routes: Routes = [
         pathMatch: 'full'
     },
      {
-        path: 'services/partnerservice',
-        component: PartnerserviceComponent,
+        path: 'services/publicservice',
+        component: PublicserviceComponent,
         pathMatch: 'full'
     },
     // my account start
