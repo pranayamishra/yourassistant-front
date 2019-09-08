@@ -19,6 +19,8 @@ import { CustomeraccountComponent } from './account/customeraccount/customeracco
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
 import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
 import { NavbarComponent } from './account/navbar/navbar.component';
+import { CentralservicesComponent } from './services/centralservices/centralservices.component';
+import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { NavbarComponent } from './account/navbar/navbar.component';
     PersonaldataComponent,
     ChangepasswordComponent,
     NavbarComponent,
+    CentralservicesComponent,
+    CustomercareconComponent,
   ],
   imports: [
     BrowserModule,

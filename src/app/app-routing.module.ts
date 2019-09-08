@@ -7,6 +7,8 @@ import {LoginComponent} from './login/login.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {ForeignersofficeComponent } from './services/foreignersoffice/foreignersoffice.component';
 import { PublicserviceComponent } from './services/publicservice/publicservice.component';
+import { CentralservicesComponent } from './services/centralservices/centralservices.component';
+import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
@@ -42,13 +44,21 @@ const routes: Routes = [
     },
     // services start
      {
-        path: 'services/oncall',
+        path: 'services/foreignersoffice',
         component: ForeignersofficeComponent,
         pathMatch: 'full'
     },
      {
         path: 'services/publicservice',
         component: PublicserviceComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/centralservices',
+        component: CentralservicesComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/customercarecon',
+        component: CustomercareconComponent,
         pathMatch: 'full'
     },
     // my account start
