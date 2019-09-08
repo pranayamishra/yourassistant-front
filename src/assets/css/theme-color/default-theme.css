@@ -108,13 +108,13 @@ Author URI : http://www.markups.io/
   color: #01bafd;
 }
 
-#mu-course-content {
+/* #mu-course-content {
   background-color: #f8f8f8;
   display: inline;
   float: left;
   padding: 100px 0;
   width: 100%;
-}
+} */
 #mu-course-content .mu-course-content-area {
   display: inline;
   float: left;

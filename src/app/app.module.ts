@@ -21,6 +21,8 @@ import { ChangepasswordComponent } from './account/changepassword/changepassword
 import { NavbarComponent } from './account/navbar/navbar.component';
 import { CentralservicesComponent } from './services/centralservices/centralservices.component';
 import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { CustomercareconComponent } from './services/customercarecon/customercar
     NavbarComponent,
     CentralservicesComponent,
     CustomercareconComponent,
+    SidebarComponent,
+    PrivacypolicyComponent,
   ],
   imports: [
     BrowserModule,

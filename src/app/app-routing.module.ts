@@ -10,10 +10,12 @@ import { PublicserviceComponent } from './services/publicservice/publicservice.c
 import { CentralservicesComponent } from './services/centralservices/centralservices.component';
 import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import {PrivacypolicyComponent} from './privacypolicy/privacypolicy.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
 import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
 import { AuthGuard } from './auth.guard';
+import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -40,6 +42,10 @@ const routes: Routes = [
      {
         path: 'imprint',
         component: ImprintComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'privacypolicy',
+        component: PrivacypolicyComponent,
         pathMatch: 'full'
     },
     // services start
