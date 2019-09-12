@@ -1,0 +1,27 @@
+<div class="mu-check_card_status">
+	<table>
+		<tr>
+			<td>
+				<h4>Check Status of Electronic Residence Permit (eAT)</h4>
+			</td>
+			<td>
+				<img src="assets/img/general/online_status.png">
+			</td>
+		</tr>
+	
+	</table>
+	<div>
+                  <form [formGroup]="checkCardStatusForm" class="checkCardStatusForm" (ngSubmit)="checkCardStatus()">
+						<p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                            <label for="email">Number of Residence Permit as per Receival Letter (Abholschein) <span class="required">*</span></label> 
+                            <input type="cardNumber" placeholder="" formControlName="cardNumber">
+                        </p>
+                       
+                        <p class="form-submit">
+							<input type="submit" value="Check Status Now" class="mu-post-btn" name="Register">
+						</p>
+											
+				</form>
+                </div>
+	
+</div>

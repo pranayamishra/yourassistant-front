@@ -16,7 +16,10 @@ import { PersonaldataComponent } from './account/personaldata/personaldata.compo
 import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
 import { AuthGuard } from './auth.guard';
 import { from } from 'rxjs';
-
+// tslint:disable-next-line:max-line-length
+import { PermanentsettlementpermitComponent } from './services/foreignersoffice/permanentsettlementpermit/permanentsettlementpermit.component';
+// tslint:disable-next-line: max-line-length
+import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
 
 const routes: Routes = [
      {
@@ -52,6 +55,14 @@ const routes: Routes = [
      {
         path: 'services/foreignersoffice',
         component: ForeignersofficeComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/foreignersoffice/permanentsettlementpermit',
+        component: PermanentsettlementpermitComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/foreignersoffice/check-electronic-card-status',
+        component: CheckElectronicCardStatusComponent,
         pathMatch: 'full'
     },
      {

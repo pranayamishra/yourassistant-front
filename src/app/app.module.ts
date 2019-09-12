@@ -23,6 +23,10 @@ import { CentralservicesComponent } from './services/centralservices/centralserv
 import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+// tslint:disable-next-line: max-line-length
+import { PermanentsettlementpermitComponent } from './services/foreignersoffice/permanentsettlementpermit/permanentsettlementpermit.component';
+// tslint:disable-next-line: max-line-length
+import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,8 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
     CustomercareconComponent,
     SidebarComponent,
     PrivacypolicyComponent,
+    PermanentsettlementpermitComponent,
+    CheckElectronicCardStatusComponent,
   ],
   imports: [
     BrowserModule,

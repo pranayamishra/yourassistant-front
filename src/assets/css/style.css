@@ -98,7 +98,7 @@ img {
 }
 
 .mu-post-btn {
-  background-color: transparent;
+  background-color: #01bafd;
   border: 1px solid #ccc;
   display: inline-block;
   font-size: 16px;
@@ -108,9 +108,11 @@ img {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  color: #fff;
+
 }
 .mu-post-btn:hover, .mu-post-btn:focus {
-  color: #fff;
+	  background-color: #1980d0;
 }
 
 /* LAYOUTS - Page layout styles */
@@ -562,6 +564,7 @@ img {
   display: inline;
   float: left;
   width: 100%;
+  height: 30%;
 }
 .mu-latest-course-single .mu-latest-course-img {
   display: inline;
