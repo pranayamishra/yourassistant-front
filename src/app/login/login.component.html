@@ -1,61 +1,63 @@
 <!-- Start login  -->
-	<section id="mu-login">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="mu-login-area">
-						<!-- start title -->
-						<div class="mu-title">
-							<h2>Do you have an account? Please login.</h2>
-							<p>Here you can login to your personal Your Assistant
-								Account.</p>
-						</div>
-						<!-- end title -->
-						<!-- start login content -->
-						<div class="mu-login-content">
-							<div class="row">
-								<div class="col-md-6" style="width: 100%">
-									<div class="mu-login-left">
-										<form [formGroup]="loginForm" class="loginform" (ngSubmit)="login()">
-											<p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
-                                                <label for="email">My Email Address is <span class="required">*</span></label> 
-                                                <input type="email" placeholder="" formControlName="email">
-                                            </p>
-                                            <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
-                                                    <div *ngIf="formControls.email.errors.required">Email is required</div>
-                                            </div>
-											<p class="comment-form-author" [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
-                                                <label for="password">Password<span class="required">*</span></label> 
-                                                <input type="password" placeholder="" formControlName="password">
-                                            </p>
-                                            <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
-                                                    <div *ngIf="formControls.password.errors.required">Password is required</div>
-                                            </div>
-                                            <p class="form-submit">
+<section id="mu-login">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mu-login-area">
+					<!-- start title -->
+					<div class="mu-title">
+						<h4>Do you have an account? Please login.</h4>
+						<p>Here you can login to your personal Your Assistant
+							Account.</p>
+					</div>
+					<!-- end title -->
+					<!-- start login content -->
+					<div class="mu-login-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mu-login-left">
+									<form [formGroup]="loginForm" class="loginform" (ngSubmit)="login()">
+										<p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+											<label for="email">My Email Address is <span
+													class="required">*</span></label>
+											<input type="email" placeholder="" formControlName="email">
+										</p>
+										<div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+											<div *ngIf="formControls.email.errors.required">Email is required</div>
+										</div>
+										<p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+											<label for="password">Password<span class="required">*</span></label>
+											<input type="password" placeholder="" formControlName="password">
+										</p>
+										<div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+											<div *ngIf="formControls.password.errors.required">Password is required
+											</div>
+										</div>
+										<p class="form-submit">
 											<input type="submit" value="Login" class="mu-post-btn" name="Login">
 										</p>
-											
-										</form>
-										
-										
-										<p>
-												<a class="hyperlink" href="footer.html">Forgot Password?</a>
-											</p>
-											
-											<p>
-												<a class="hyperlink" routerLink="/registration">New Customer? Register here!</a>
-											</p>
-											
-									</div>
+
+									</form>
+
+
+									<p>
+										<a class="hyperlink" href="footer.html">Forgot Password?</a>
+									</p>
+
+									<p>
+										<a class="hyperlink" routerLink="/registration">New Customer? Register here!</a>
+									</p>
 
 								</div>
 
 							</div>
+
 						</div>
-						<!-- end login content -->
 					</div>
+					<!-- end login content -->
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- End login  -->
+	</div>
+</section>
+<!-- End login  -->

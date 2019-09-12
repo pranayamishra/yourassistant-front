@@ -20,6 +20,8 @@ import { from } from 'rxjs';
 import { PermanentsettlementpermitComponent } from './services/foreignersoffice/permanentsettlementpermit/permanentsettlementpermit.component';
 // tslint:disable-next-line: max-line-length
 import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
+import { TermsComponent } from './terms/terms.component';
+
 
 const routes: Routes = [
      {
@@ -49,6 +51,10 @@ const routes: Routes = [
     }, {
         path: 'privacypolicy',
         component: PrivacypolicyComponent,
+        pathMatch: 'full'
+    },  {
+        path: 'termsandconditions',
+        component: TermsComponent,
         pathMatch: 'full'
     },
     // services start

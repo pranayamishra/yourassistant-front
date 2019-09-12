@@ -102,17 +102,17 @@ img {
   border: 1px solid #ccc;
   display: inline-block;
   font-size: 16px;
-  padding: 10px 18px;
+  padding: 8px 18px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  color: #fff;
+  color: black;
 
 }
 .mu-post-btn:hover, .mu-post-btn:focus {
-	  background-color: #1980d0;
+	  color: #fff;
 }
 
 /* LAYOUTS - Page layout styles */
@@ -389,23 +389,6 @@ img {
   height: 450px;
 }
 
-.mu-title {
-  display: inline;
-  float: left;
-  text-align: center;
-  width: 100%;
-}
-.mu-title h2 {
-  color: #000;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-.mu-title p {
-  color: #555;
-  letter-spacing: 0.3px;
-  line-height: 1.7;
-  padding: 0 120px;
-}
 
 /*==================
  ABOUT US COUNTER SECTION
@@ -534,12 +517,7 @@ img {
   float: left;
   width: 100%;
 }
-#mu-latest-courses .mu-latest-courses-area .mu-title h2 {
-  color: #fff;
-}
-#mu-latest-courses .mu-latest-courses-area .mu-title p {
-  color: #fff;
-}
+
 #mu-latest-courses .mu-latest-courses-area .mu-latest-courses-content {
   display: inline;
   float: left;
@@ -1658,111 +1636,6 @@ img {
   display: none;
 }
 
-/*==================
- CONTACT PAGE
-====================*/
-#mu-contact {
-  display: inline;
-  float: left;
-  padding: 100px 0;
-  width: 100%;
-}
-#mu-contact .mu-contact-area {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-contact .mu-contact-area .mu-contact-content {
-  display: inline;
-  float: left;
-  margin-top: 50px;
-  width: 100%;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left {
-  display: inline;
-  float: left;
-  width: 100%;
-  align: center;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform .reply-title {
-  font-size: 25px;
-  margin-top: 0;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform label {
-  display: block;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform label .required {
-  color: #f60;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform input[type="text"],
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform input[type="email"],
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform input[type="url"] {
-  border: none;
-  border: 1px solid #ddd;
-  color: #555;
-  margin-bottom: 10px;
-  height: 35px;
-  padding: 5px;
-  width: 500px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform textarea {
-  border: none;
-  border: 1px solid #ddd;
-  color: #555;
-  margin-bottom: 5px;
-  padding: 10px;
-  height: 150px;
-  width: 100%;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-left .contactform .form-submit input {
-  margin-top: 10px;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-right {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-contact .mu-contact-area .mu-contact-content .mu-contact-right iframe {
-  height: 500px;
-}
-
-/*==================
- ERROR PAGE
-====================*/
-#mu-error {
-  display: inline;
-  float: left;
-  padding: 100px 0;
-  width: 100%;
-}
-#mu-error .mu-error-area {
-  display: inline;
-  float: left;
-  width: 100%;
-  text-align: center;
-}
-#mu-error .mu-error-area p {
-  font-size: 22px;
-}
-#mu-error .mu-error-area h2 {
-  font-size: 200px;
-  line-height: 1.7;
-}
 
 /*==================
  FOOTER
@@ -1955,9 +1828,7 @@ img {
     padding: 60px 0;
   }
 
-  .mu-title p {
-    padding: 0 20px;
-  }
+
 
   #mu-features .mu-features-area .mu-features-content {
     margin-top: 30px;

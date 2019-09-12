@@ -27,6 +27,7 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
 import { PermanentsettlementpermitComponent } from './services/foreignersoffice/permanentsettlementpermit/permanentsettlementpermit.component';
 // tslint:disable-next-line: max-line-length
 import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/
     PrivacypolicyComponent,
     PermanentsettlementpermitComponent,
     CheckElectronicCardStatusComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,

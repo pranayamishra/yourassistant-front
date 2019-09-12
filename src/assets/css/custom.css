@@ -1,7 +1,7 @@
 /*==================
  GENERAL
 ====================*/
-.hyperlink:link {
+/* .hyperlink:link {
 	color: #01bafd;
 }
 
@@ -13,7 +13,7 @@
 	 color: #333;
 	 text-decoration: underline;
 	
-}
+} */
 
 /*==================
  SLIDER SECTION
@@ -325,33 +325,26 @@
  Tiltles in content pages
 ====================*/
 .mu-title {
-  display: inline;
-  float: left;
   text-align: left;
-  width: 100%;
 }
 .mu-title h2 {
   color: #000;
   margin-bottom: 10px;
   text-transform: capitalize;
 }
+.mu-title h4 {
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
 .mu-title p {
   color: #555;
-  letter-spacing: 0.3px;
+  /* letter-spacing: 0.3px; */
   line-height: 1.7;
-  padding: 0 120px;
+  /* padding: 0 120px; */
 }
 
-#mu-latest-courses .mu-latest-courses-area .mu-title h2 {
-  color: #fff;
-}
-#mu-latest-courses .mu-latest-courses-area .mu-title p {
-  color: #fff;
-}
 
-.mu-title p {
-    padding: 0 10px;
- }
 
 /*==================
  General content
@@ -359,14 +352,7 @@
  #mu-course-content {
   background-color: #f8f8f8;
   display: inline;
-  float: left;
   padding: 10px 0;
-  width: 100%;
-}
 
-/*==================
- IMPRINT SECTION
-====================*/
-#imprint-container {
-	  padding: 20px 0;
-}
+} 
+
