@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { sharedStylesheetJitUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-permanentsettlementpermit',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PermanentsettlementpermitComponent implements OnInit {
 
-  constructor() { }
+    collapsed: boolean = true;
+	constructor() { }
 
   ngOnInit() {
   }
-
+  toggle() {
+	if(this.collapsed == true) {
+		this.collapsed = false;
+	} else {
+		this.collapsed = true;
+	}
+}
 }

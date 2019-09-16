@@ -82,7 +82,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+			"scripts": ["src/assets/js/bootstrap.js",
+			"src/assets/js/custom.js",
+			"src/assets/js/jquery.min.js",
+			"src/assets/js/jquery.mixitup.js",
+			"src/assets/js/app.module.js",
+			"src/assets/js/slick.js",
+			"src/assets/js/waypoints.js"
+			],
             "assets": [
               "src/favicon.ico",
               "src/assets"

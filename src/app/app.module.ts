@@ -28,6 +28,10 @@ import { PermanentsettlementpermitComponent } from './services/foreignersoffice/
 // tslint:disable-next-line: max-line-length
 import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
 import { TermsComponent } from './terms/terms.component';
+// tslint:disable-next-line: max-line-length
+import { ElectronicResidencePermitComponent } from './services/foreignersoffice/electronic-residence-permit/electronic-residence-permit.component';
+import { AppointmentComponent } from './services/foreignersoffice/appointment/appointment.component';
+import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/foreigners-office-search/foreigners-office-search.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,9 @@ import { TermsComponent } from './terms/terms.component';
     PermanentsettlementpermitComponent,
     CheckElectronicCardStatusComponent,
     TermsComponent,
+    ElectronicResidencePermitComponent,
+    AppointmentComponent,
+    ForeignersOfficeSearchComponent,
   ],
   imports: [
     BrowserModule,

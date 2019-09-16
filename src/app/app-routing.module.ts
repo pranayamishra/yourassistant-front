@@ -21,6 +21,10 @@ import { PermanentsettlementpermitComponent } from './services/foreignersoffice/
 // tslint:disable-next-line: max-line-length
 import { CheckElectronicCardStatusComponent } from './services/foreignersoffice/check-electronic-card-status/check-electronic-card-status.component';
 import { TermsComponent } from './terms/terms.component';
+// tslint:disable-next-line: max-line-length
+import { ElectronicResidencePermitComponent } from './services/foreignersoffice/electronic-residence-permit/electronic-residence-permit.component';
+import { AppointmentComponent } from './services/foreignersoffice/appointment/appointment.component';
+import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/foreigners-office-search/foreigners-office-search.component';
 
 
 const routes: Routes = [
@@ -69,6 +73,18 @@ const routes: Routes = [
     }, {
         path: 'services/foreignersoffice/check-electronic-card-status',
         component: CheckElectronicCardStatusComponent,
+        pathMatch: 'full'
+	}, {
+        path: 'services/foreignersoffice/electronic_residence_permit',
+        component: ElectronicResidencePermitComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/foreignersoffice/appointment',
+        component: AppointmentComponent,
+        pathMatch: 'full'
+    }, {
+        path: 'services/foreignersoffice/search',
+        component: ForeignersOfficeSearchComponent,
         pathMatch: 'full'
     },
      {

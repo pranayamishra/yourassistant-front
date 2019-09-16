@@ -247,3 +247,6 @@ jQuery(function($){
 
 });
 
+/*
+Newly Added 
+*/
