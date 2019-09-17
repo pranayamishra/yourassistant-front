@@ -2,22 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { sharedStylesheetJitUrl } from '@angular/compiler';
 
 @Component({
-  selector: 'app-permanentsettlementpermit',
-  templateUrl: './permanentsettlementpermit.component.html',
-  styleUrls: ['./permanentsettlementpermit.component.css']
+	selector: 'app-permanentsettlementpermit',
+	templateUrl: './permanentsettlementpermit.component.html',
+	styleUrls: ['./permanentsettlementpermit.component.css']
 })
 export class PermanentsettlementpermitComponent implements OnInit {
 
-    collapsed: boolean = true;
+	isCollapsedDocuments: boolean = true;
+	isCollapsedTips: boolean = true;
+
 	constructor() { }
 
-  ngOnInit() {
-  }
-  toggle() {
-	if(this.collapsed == true) {
-		this.collapsed = false;
-	} else {
-		this.collapsed = true;
+	ngOnInit() {
+	}
+	toggleDocuments() {
+		if (this.isCollapsedDocuments == true) {
+			this.isCollapsedDocuments = false;
+		} else {
+			this.isCollapsedDocuments = true;
+		}
+	}
+	toggleTips() {
+		if (this.isCollapsedTips == true) {
+			this.isCollapsedTips = false;
+		} else {
+			this.isCollapsedTips = true;
+		}
 	}
 }
-}
+

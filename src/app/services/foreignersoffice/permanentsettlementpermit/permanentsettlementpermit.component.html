@@ -51,15 +51,19 @@
 													itaque, porro ipsam tempore enim error eius quia, culpa.
 													Reprehenderit consequuntur voluptatem dolorum magni natus inventore
 													molestias veritatis eos aspernatur repudiandae.</p>
-												<button type="button" (click)="toggle()" class="collapsible">Documents Required</button>
-												<div [ngClass]="{
-													'content-invisible': !collpased,
-													'content-visible' : collapsed
-												}">
+												<button type="button" (click)="toggleDocuments()" class="collapsible">Documents Required</button>
+												<div [style.display]="isCollapsedDocuments ? 'none':'block'" class="content">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 														eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 														enim ad minim veniam, quis nostrud exercitation ullamco laboris
 														nisi ut aliquip ex ea commodo consequat.</p>
+												</div>
+												<button type="button" (click)="toggleTips()" class="collapsible">Tips for your Foreigner's Office</button>
+												<div [style.display]="isCollapsedTips ? 'none':'block'" class="content">
+														<ul>
+															<li>Tip 1</li>
+															<li>Tip 2</li>
+														</ul>
 												</div>
 											</div>
 
