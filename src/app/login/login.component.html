@@ -17,19 +17,20 @@
 							<div class="col-md-12">
 								<div class="mu-login-left">
 									<form [formGroup]="loginForm" class="loginform" (ngSubmit)="login()">
-										<p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
-											<label for="email">My Email Address is <span
-													class="required">*</span></label>
-											<input type="email" placeholder="" formControlName="email">
+										<p>
+											<label for="email">My Email Address is <span class="required">*</span></label>
+											<input type="email" placeholder="" formControlName="email" 
+											[ngStyle]="{ 'border': isSubmitted && formControls.email.errors ? '1px solid red' : ''  }">
 										</p>
-										<div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+										<div *ngIf="isSubmitted && formControls.email.errors" class="error-block">
 											<div *ngIf="formControls.email.errors.required">Email is required</div>
 										</div>
-										<p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+										<p>
 											<label for="password">Password<span class="required">*</span></label>
-											<input type="password" placeholder="" formControlName="password">
+											<input type="password" placeholder="" formControlName="password"
+											[ngStyle]="{ 'border': isSubmitted && formControls.password.errors ? '1px solid red' : ''  }">
 										</p>
-										<div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+										<div *ngIf="isSubmitted && formControls.password.errors" class="error-block">
 											<div *ngIf="formControls.password.errors.required">Password is required
 											</div>
 										</div>
