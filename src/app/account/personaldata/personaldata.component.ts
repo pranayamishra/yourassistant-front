@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../../user.service';
+import { UserService } from '../../backend-service/user.service';
 
 @Component({
     selector: 'app-personaldata',
@@ -32,7 +32,7 @@ export class PersonaldataComponent implements OnInit {
         if (this.customerProfileForm.invalid) {
             return;
         }
-        this.userService.update(this.customerProfileForm.value);
+        this.userService.update(null);
     }
     get formControls() { return this.customerProfileForm.controls; }
 

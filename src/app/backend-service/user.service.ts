@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { User } from './user';
+import {User} from '../domain/user';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  public login(userInfo: User) {
-      if ((userInfo.email === 'test@abc.com') && (userInfo.password === '123456')) {
+export class UserService {
+ public login(user: User) {
+      if ((user.email === 'test@abc.com') && (user.password === '123456')) {
         localStorage.setItem('ACCESS_TOKEN', 'abcd');
       }
   }
@@ -19,6 +19,17 @@ export class AuthService {
 
   public logout() {
     localStorage.removeItem('ACCESS_TOKEN');
+  }
+
+  public update(Ob : Object){
+
+  }
+
+  public changePassword(Ob: Object) {
+
+  }
+  public register(Ob: Object) {
+	  
   }
   constructor() { }
 }

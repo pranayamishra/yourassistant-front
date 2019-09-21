@@ -7,5 +7,4 @@ export interface User {
     repeatedPassword: string;
     newPassword: string;
     repeatedNewPassword: string;
-
 }
