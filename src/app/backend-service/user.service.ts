@@ -7,8 +7,12 @@ import {User} from '../domain/user';
 export class UserService {
  public login(user: User) {
       if ((user.email === 'test@abc.com') && (user.password === '123456')) {
-        localStorage.setItem('ACCESS_TOKEN', 'abcd');
-      }
+		localStorage.setItem('ACCESS_TOKEN', 'abcd');
+		user.firstName = 'Pranaya'
+		user.lastName = 'Mishra'
+		return user;
+	  }
+	  return null;
   }
 
   public isLoggedIn() {
