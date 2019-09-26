@@ -34,6 +34,7 @@ import { TermsComponent } from './terms/terms.component';
 import { ElectronicResidencePermitComponent } from './services/foreignersoffice/electronic-residence-permit/electronic-residence-permit.component';
 import { AppointmentComponent } from './services/foreignersoffice/appointment/appointment.component';
 import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/foreigners-office-search/foreigners-office-search.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/for
     ElectronicResidencePermitComponent,
     AppointmentComponent,
     ForeignersOfficeSearchComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
