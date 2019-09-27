@@ -9,7 +9,8 @@
             <h2>Register yourself</h2>
             <p>Register yourself below with only Email and Password. Fill other details in 'My Personal Data' section later.</p>
           </div>
-          <!-- end title -->
+		  <!-- end title -->
+		  <app-alert></app-alert>
            <!-- start registration content -->
           <div class="mu-registration-content">           
             <div class="row">
@@ -18,23 +19,28 @@
                   <form [formGroup]="registrationForm" class="registrationform" (ngSubmit)="register()">
 						<p   [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
                             <label for="email">My Email Address is <span class="required">*</span></label> 
-                            <input type="email" placeholder="" formControlName="email">
+							<input type="email" placeholder="" formControlName="email"
+							[ngStyle]="{ 'border': isSubmitted && formControls.email.errors ? '1px solid red' : ''  }">
                         </p>
-                        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
-                             <div *ngIf="formControls.email.errors.required">Email is required</div>
-                        </div>
+                        <div *ngIf="isSubmitted && formControls.email.errors" class="error-block">
+							 <div *ngIf="formControls.email.errors.required">Email is required</div>
+							 <div *ngIf="formControls.email.errors.email">Not a valid Email</div>
+						</div>
+				
 						<p   [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
                             <label for="password">Password<span class="required">*</span></label> 
-                            <input type="password" placeholder="" formControlName="password">
+							<input type="password" placeholder="" formControlName="password"
+							[ngStyle]="{ 'border': isSubmitted && formControls.password.errors ? '1px solid red' : ''  }">
                         </p>
-                        <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                        <div *ngIf="isSubmitted && formControls.password.errors" class="error-block">
                              <div *ngIf="formControls.password.errors.required">Password is required</div>
                         </div>
                         <p   [ngClass]="{ 'has-error': isSubmitted && formControls.repeatedPassword.errors }">
                             <label for="repeatedPassword">Repeat Password<span class="required">*</span></label> 
-                            <input type="password" placeholder="" formControlName="repeatedPassword">
+							<input type="password" placeholder="" formControlName="repeatedPassword"
+							[ngStyle]="{ 'border': isSubmitted && formControls.repeatedPassword.errors ? '1px solid red' : ''  }">
                         </p>
-                        <div *ngIf="isSubmitted && formControls.repeatedPassword.errors" class="help-block">
+                        <div *ngIf="isSubmitted && formControls.repeatedPassword.errors" class="error-block">
                              <div *ngIf="formControls.repeatedPassword.errors.required">Repeated Password is required</div>
                         </div>
                         <p class="">
@@ -45,9 +51,9 @@
 							<input type="submit" value="Register Now" class="mu-post-btn" name="Register">
 						</p>
 											
+		
 				</form>
                 </div>
-                
               </div>
 
             </div>

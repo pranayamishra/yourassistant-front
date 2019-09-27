@@ -20,7 +20,7 @@ export class AlertComponent implements OnInit, OnDestroy {
 		this.subscription = this.alertService.getMessage().subscribe(message => {
 			this.isVisible = true;
 			this.message = message;
-			setTimeout(()=> this.isVisible = false,2500); // hide the alert after 2.5s
+			setTimeout(()=> this.isVisible = false,5000); // hide the alert after 2.5s
 		});
 
 	}

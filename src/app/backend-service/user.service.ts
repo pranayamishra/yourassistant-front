@@ -25,15 +25,18 @@ export class UserService {
     localStorage.removeItem('ACCESS_TOKEN');
   }
 
-  public update(Ob : Object){
+  public update(user : User){
 
   }
 
-  public changePassword(Ob: Object) {
+  public changePassword(user: User) {
 
   }
-  public register(Ob: Object) {
-	  
+  public register(user: User) {
+	  if(user.email == 'test1@abc.com') {
+		  return 2;
+		}
+		return 1;
   }
   constructor() { }
 }
