@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../backend-service/user.service';
+import {AlertService} from '../../alert/alert.service';
+import {MustMatch} from '../../helpers/customvalidators'
 
 @Component({
     selector: 'app-changepassword',
@@ -9,7 +11,7 @@ import { UserService } from '../../backend-service/user.service';
 })
 export class ChangepasswordComponent implements OnInit {
 
-    constructor(private userService: UserService, private formBuilder: FormBuilder) { }
+    constructor(private userService: UserService, private alertService : AlertService, private formBuilder: FormBuilder) { }
     changePasswordForm: FormGroup;
     isSubmitted = false;
     ngOnInit() {
@@ -17,7 +19,9 @@ export class ChangepasswordComponent implements OnInit {
             password: ['', Validators.required],
             newPassword: ['', Validators.required],
             repeatedNewPassword: ['', Validators.required]
-        });
+        },{
+			validator: MustMatch('newPassword','repeatedNewPassword')
+		});
     }
     changePassword() {
 
@@ -26,7 +30,7 @@ export class ChangepasswordComponent implements OnInit {
             return;
         }
         this.userService.changePassword(this.changePasswordForm.value);
-        window.alert('done');
+        this.alertService.success('Password changed successfully');
 
     }
     get formControls() { return this.changePasswordForm.controls; }

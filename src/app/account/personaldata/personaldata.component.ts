@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../backend-service/user.service';
 
+
 @Component({
     selector: 'app-personaldata',
     templateUrl: './personaldata.component.html',

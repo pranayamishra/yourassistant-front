@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../backend-service/user.service';
 import { Router } from '@angular/router';
 import { AlertService } from '../alert/alert.service';
+import { MustMatch } from '../helpers/customvalidators';
 
 
 @Component({
@@ -22,7 +23,11 @@ export class RegistrationComponent implements OnInit {
             password: ['', Validators.required],
             repeatedPassword: ['', Validators.required]
 
-        });
+		},{
+			validator: MustMatch('password', 'repeatedPassword')
+		}
+		
+		);
     }
 
     register() {

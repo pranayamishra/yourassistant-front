@@ -41,7 +41,8 @@
 							[ngStyle]="{ 'border': isSubmitted && formControls.repeatedPassword.errors ? '1px solid red' : ''  }">
                         </p>
                         <div *ngIf="isSubmitted && formControls.repeatedPassword.errors" class="error-block">
-                             <div *ngIf="formControls.repeatedPassword.errors.required">Repeated Password is required</div>
+							 <div *ngIf="formControls.repeatedPassword.errors.required">Repeated Password is required</div>
+							 <div *ngIf="formControls.repeatedPassword.errors.mustMatch">Repeated Password is not matching password</div>
                         </div>
                         <p class="">
                          By clicking on 'Register Now' below, you open a Your Assistant Account. For this account 
