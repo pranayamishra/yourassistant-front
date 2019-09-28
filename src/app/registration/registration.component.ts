@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
 	isSuccess = 0;
     ngOnInit() {
         this.registrationForm = this.formBuilder.group({
-			email: ['', Validators.required, Validators.minLength(5)],
+			email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required],
             repeatedPassword: ['', Validators.required]
 
