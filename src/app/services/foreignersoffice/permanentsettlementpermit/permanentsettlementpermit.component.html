@@ -51,28 +51,60 @@
 													itaque, porro ipsam tempore enim error eius quia, culpa.
 													Reprehenderit consequuntur voluptatem dolorum magni natus inventore
 													molestias veritatis eos aspernatur repudiandae.</p>
-												<button [ngClass] ="{
+												<button [ngClass]="{
 													'collapsible': true,
 												 	'activediv' : !isCollapsedDocuments
 												}" type="button" (click)="toggleDocuments()" class="collapsible">Documents Required</button>
-												<div [style.display]="isCollapsedDocuments ? 'none':'block'" class="content">
+												<div [style.display]="isCollapsedDocuments ? 'none':'block'"
+													class="content">
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 														eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 														enim ad minim veniam, quis nostrud exercitation ullamco laboris
 														nisi ut aliquip ex ea commodo consequat.</p>
 												</div>
-												<button [ngClass] ="{
+												<button [ngClass]="{
 													'collapsible': true,
 												 	'activediv' : !isCollapsedTips
-												}"
-												type="button" (click)="toggleTips()" class="collapsible">Tips for your Foreigner's Office</button>
-												
+												}" type="button" (click)="toggleTips()" class="collapsible">Tips for your Foreigner's Office</button>
+
 												<div [style.display]="isCollapsedTips ? 'none':'block'" class="content">
-														<ul>
-															<li>Tip 1</li>
-															<li>Tip 2</li>
-														</ul>
+													<ul>
+														<li>Tip 1</li>
+														<li>Tip 2</li>
+													</ul>
 												</div>
+												<div>
+													<mat-accordion>
+														<mat-expansion-panel>
+															<mat-expansion-panel-header>
+																<mat-panel-title>
+																	Documents Required
+																</mat-panel-title>
+																<mat-panel-description>
+																	Documents Reuired by Foreigner's Office
+																</mat-panel-description>
+															</mat-expansion-panel-header>
+
+
+														</mat-expansion-panel>
+														<mat-expansion-panel (opened)="panelOpenState = true"
+															(closed)="panelOpenState = false">
+															<mat-expansion-panel-header>
+																<mat-panel-title>
+																	Tips for your Foreigner's Office
+																</mat-panel-title>
+																<mat-panel-description>
+																	Currently I am
+																	{{panelOpenState ? 'open' : 'closed'}}
+																</mat-panel-description>
+															</mat-expansion-panel-header>
+															<p>I'm visible because I am open</p>
+														</mat-expansion-panel>
+													</mat-accordion>
+
+
+												</div>
+
 											</div>
 
 										</div>

@@ -10,6 +10,7 @@ export class PermanentsettlementpermitComponent implements OnInit {
 
 	isCollapsedDocuments: boolean = true;
 	isCollapsedTips: boolean = true;
+  panelOpenState = false;
 
 	constructor() { }
 

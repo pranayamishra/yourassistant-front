@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
@@ -35,45 +37,49 @@ import { ElectronicResidencePermitComponent } from './services/foreignersoffice/
 import { AppointmentComponent } from './services/foreignersoffice/appointment/appointment.component';
 import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/foreigners-office-search/foreigners-office-search.component';
 import { AlertComponent } from './alert/alert.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    MenuComponent,
-    FooterComponent,
-    HomeComponent,
-    ContactComponent,
-    DefaultComponent,
-    LoginComponent,
-    RegistrationComponent,
-    ForeignersofficeComponent,
-    PublicserviceComponent,
-    ImprintComponent,
-    CustomeraccountComponent,
-    PersonaldataComponent,
-    ChangepasswordComponent,
-    NavbarComponent,
-    CentralservicesComponent,
-    CustomercareconComponent,
-    SidebarComponent,
-    PrivacypolicyComponent,
-    PermanentsettlementpermitComponent,
-    CheckElectronicCardStatusComponent,
-    TermsComponent,
-    ElectronicResidencePermitComponent,
-    AppointmentComponent,
-    ForeignersOfficeSearchComponent,
-    AlertComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-	ReactiveFormsModule,
-	HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		MenuComponent,
+		FooterComponent,
+		HomeComponent,
+		ContactComponent,
+		DefaultComponent,
+		LoginComponent,
+		RegistrationComponent,
+		ForeignersofficeComponent,
+		PublicserviceComponent,
+		ImprintComponent,
+		CustomeraccountComponent,
+		PersonaldataComponent,
+		ChangepasswordComponent,
+		NavbarComponent,
+		CentralservicesComponent,
+		CustomercareconComponent,
+		SidebarComponent,
+		PrivacypolicyComponent,
+		PermanentsettlementpermitComponent,
+		CheckElectronicCardStatusComponent,
+		TermsComponent,
+		ElectronicResidencePermitComponent,
+		AppointmentComponent,
+		ForeignersOfficeSearchComponent,
+		AlertComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		MatSliderModule,
+		MatExpansionModule,
+		BrowserAnimationsModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
