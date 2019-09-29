@@ -1,4 +1,51 @@
-<app-navbar></app-navbar>
+<!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+<!--            <h2>Contact</h2> -->
+           <ol class="breadcrumb">
+			<li><a href="#">Home</a></li>     
+			<li class="active">My Account</li>       
+          </ol>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+<!-- Start login -->
+<section id="mu-login">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mu-login-area">
+					<!-- start title -->
+					<div class="mu-title">
+						<h3>Your Personal Area</h3>
+						<p>Here you can see details of your account and manage it.</p>
+					</div>
+					<!-- end title -->
+					<!-- start login content -->
+					<app-alert></app-alert>
+					<div class="mu-customeraccount-content">
+						<div class="row">
+							<mat-tab-group>
+								<mat-tab label="Personal Data">
+									<app-personaldata> </app-personaldata>
+								</mat-tab>
+								<mat-tab label="Change Password">
+									<app-changepassword></app-changepassword>
+								</mat-tab>
+							</mat-tab-group>
 
-
-
+						</div>
+					</div>
+					<!-- end login content -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End login  -->

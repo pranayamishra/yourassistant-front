@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 import { AppComponent } from './app.component';
@@ -22,7 +23,6 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { CustomeraccountComponent } from './account/customeraccount/customeraccount.component';
 import { PersonaldataComponent } from './account/personaldata/personaldata.component';
 import { ChangepasswordComponent } from './account/changepassword/changepassword.component';
-import { NavbarComponent } from './account/navbar/navbar.component';
 import { CentralservicesComponent } from './services/centralservices/centralservices.component';
 import { CustomercareconComponent } from './services/customercarecon/customercarecon.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -56,7 +56,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		CustomeraccountComponent,
 		PersonaldataComponent,
 		ChangepasswordComponent,
-		NavbarComponent,
 		CentralservicesComponent,
 		CustomercareconComponent,
 		SidebarComponent,
@@ -77,7 +76,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		HttpClientModule,
 		MatSliderModule,
 		MatExpansionModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		MatTabsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
