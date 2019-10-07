@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatCardModule} from '@angular/material/card';
+import { AgmCoreModule} from '@agm/core'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -38,6 +39,7 @@ import { AppointmentComponent } from './services/foreignersoffice/appointment/ap
 import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/foreigners-office-search/foreigners-office-search.component';
 import { AlertComponent } from './alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleMapsComponent } from './general-components/google-maps/google-maps.component';
 
 @NgModule({
 	declarations: [
@@ -67,6 +69,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		AppointmentComponent,
 		ForeignersOfficeSearchComponent,
 		AlertComponent,
+		GoogleMapsComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -77,7 +80,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		MatSliderModule,
 		MatExpansionModule,
 		BrowserAnimationsModule,
-		MatTabsModule
+		MatTabsModule,
+		MatCardModule,
+		AgmCoreModule.forRoot({
+			apiKey: 'AIzaSyDmLysWukKTnHVSprJc2tMIxce5MOvjt7o'
+		})
 	],
 	providers: [],
 	bootstrap: [AppComponent]
