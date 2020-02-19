@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+//Materials
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule} from '@angular/material/card';
-import { AgmCoreModule} from '@agm/core'
+//
+//Google Maps Modules
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AgmCoreModule, GoogleMapsAPIWrapper} from '@agm/core'
 
+//
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
@@ -40,6 +45,11 @@ import { ForeignersOfficeSearchComponent } from './services/foreignersoffice/for
 import { AlertComponent } from './alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GoogleMapsComponent } from './general-components/google-maps/google-maps.component';
+import { GoogleMapsAddressSearchComponent } from './general-components/google-maps-address-search/google-maps-address-search.component';
+
+//environment
+import { environment } from './environment';
+//
 
 @NgModule({
 	declarations: [
@@ -70,6 +80,7 @@ import { GoogleMapsComponent } from './general-components/google-maps/google-map
 		ForeignersOfficeSearchComponent,
 		AlertComponent,
 		GoogleMapsComponent,
+		GoogleMapsAddressSearchComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -83,10 +94,11 @@ import { GoogleMapsComponent } from './general-components/google-maps/google-map
 		MatTabsModule,
 		MatCardModule,
 		AgmCoreModule.forRoot({
-			apiKey: 'AIzaSyDmLysWukKTnHVSprJc2tMIxce5MOvjt7o'
-		})
+			apiKey: environment.googleMapApiKey
+		}),
+		NgbModule
 	],
-	providers: [],
+	providers: [GoogleMapsAPIWrapper],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
