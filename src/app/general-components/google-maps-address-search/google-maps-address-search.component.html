@@ -1,4 +1,4 @@
-check
+
 <div class="container-fluid">
   <div class='row'>
     <div class="form-group">
@@ -28,6 +28,7 @@ check
     <button (click)='updateOnMap()' type="submit" class="btn btn-primary">Search</button>
   </div>
 </div>
-<agm-map [(latitude)]="location.lat" [(longitude)]="location.lng" [(zoom)]="location.zoom" [disableDefaultUI]="true" [zoomControl]="true" [(fitBounds)]='location.viewport'>
+{{location.marker.lat}} and {{location.marker.lng}} 
+<!-- <agm-map [(latitude)]="location.lat" [(longitude)]="location.lng" [(zoom)]="location.zoom" [disableDefaultUI]="true" [zoomControl]="true" [(fitBounds)]='location.viewport'>
   <agm-marker [(latitude)]="location.marker.lat" [(longitude)]="location.marker.lng" [markerDraggable]="location.marker.draggable" (dragEnd)='markerDragEnd($event)'></agm-marker>
-</agm-map>
+</agm-map> -->
