@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '../../../general-components/google-maps-address-search/google-maps-address-search.component'
 
 @Component({
   selector: 'app-foreigners-office-search',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForeignersOfficeSearchComponent implements OnInit {
 
-  constructor() { }
+ location : Location ;
+ title: string = 'Your Foreigners Office';
+
+  constructor() { 
+	  this.location = new Location();
+  }
 
   ngOnInit() {
+  }
+
+  setLocation(location: Location) {
+	  this.location = location;
   }
 
 }

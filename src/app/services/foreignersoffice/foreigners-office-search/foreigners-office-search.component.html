@@ -31,9 +31,15 @@
 							<div class="mu-course-container mu-course-details">
 								<div class="row">
 									<div class="col-md-12">
-										<app-google-maps-address-search></app-google-maps-address-search>
-										<div class="mu-latest-course-single">
-											<app-google-maps [latitude]="51.678418" [longitude]="7.809007">
+										<app-google-maps-address-search (addressEvent)="setLocation($event)">
+										</app-google-maps-address-search>
+
+
+										<!-- Call to Ausländerbehörde service will come here -->
+
+										<div *ngIf="location.lat && location.lng" class="mu-latest-course-single">
+											<app-google-maps  [title]="title" [latitude]="location.lat"
+												[longitude]="location.lng" [address]="location.formatted_address">
 											</app-google-maps>
 
 										</div>

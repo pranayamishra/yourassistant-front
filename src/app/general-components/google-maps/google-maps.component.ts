@@ -6,9 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
 	styleUrls: ['./google-maps.component.css']
 })
 export class GoogleMapsComponent implements OnInit {
-	@Input() title;
-	@Input() latitude;
-	@Input() longitude;
+	@Input() title:string;
+	@Input() latitude:number;
+	@Input() longitude:number;
+	@Input() address: string;
 	zoom = 15;
 	constructor() { }
 
