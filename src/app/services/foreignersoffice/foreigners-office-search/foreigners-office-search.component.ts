@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '../../../general-components/google-maps-address-search/google-maps-address-search.component'
+import {Location} from '../../../backend-service/google/location';
 
 @Component({
   selector: 'app-foreigners-office-search',
