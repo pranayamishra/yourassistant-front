@@ -15,6 +15,7 @@ export class Location {
 	address_zip?: string;
 	address_state?: string;
 	formatted_address?: string;
+	suggested_address?: string;
 	isGeocoded: boolean = false;
 
 	public getFullAddress() : string {

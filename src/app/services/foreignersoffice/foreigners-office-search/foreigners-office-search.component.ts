@@ -1,7 +1,7 @@
 import {
 	Component, OnInit, ChangeDetectorRef
 } from '@angular/core';
-import { Location } from '../../../backend-service/google/location';
+import { Location } from '../../../backend-service/location';
 
 @Component({
 	selector: 'app-foreigners-office-search',
