@@ -1,13 +1,13 @@
-import {  NgZone, OnInit, Injectable} from '@angular/core';
-import {Location} from '../google/location';
-import { MapsAPILoader, GoogleMapsAPIWrapper, AgmMap} from '@agm/core';
+import { NgZone, OnInit, Injectable } from '@angular/core';
+import { Location } from '../google/location';
+import { MapsAPILoader, GoogleMapsAPIWrapper, AgmMap } from '@agm/core';
 
 declare var google: any;
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
-export class GoogleMapService  {
+export class GoogleMapService {
 
 	geocoder: any;
 
@@ -22,26 +22,29 @@ export class GoogleMapService  {
 
 
 
-	findLocation(location :Location) : Location {
-		window.alert('inside findlocation')
+	enhanceLocationWithGeocode(location: Location, callback: any) {
+
 		if (!this.geocoder) this.geocoder = new google.maps.Geocoder()
 		this.geocoder.geocode({
 			'address': location.getFullAddress()
 		}, (results, status) => {
-			
+
 			if (status == google.maps.GeocoderStatus.OK) {
 				location.lat = results[0].geometry.location.lat();
 				location.lng = results[0].geometry.location.lng();
 				location.formatted_address = results[0].formatted_address;
 				location.isGeocoded = true;
-              window.alert('geocoded')
-			} 
-			
+
+			} else {
+				location.isGeocoded = false;
+
+			}
+			callback(location);
+
 		})
-		window.alert(location.lat + ' & ' +location.lng);
-		return location;
+
 	}
-		// markerDragEnd(m: any, $event: any) {
+	// markerDragEnd(m: any, $event: any) {
 	// 	this.marker.lat = m.coords.lat;
 	// 	this.marker.lng = m.coords.lng;
 	// 	this.findAddressByCoordinates();

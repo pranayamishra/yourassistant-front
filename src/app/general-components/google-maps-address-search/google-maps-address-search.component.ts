@@ -1,6 +1,6 @@
-import { Component, Input, ViewChild, OnInit, NgZone, Output, EventEmitter } from '@angular/core';
-import {Location} from '../../backend-service/google/location';
-import {GoogleMapService} from '../../backend-service/google/googlemapservice';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Location } from '../../backend-service/google/location';
+import { GoogleMapService } from '../../backend-service/google/googlemapservice';
 
 
 
@@ -11,31 +11,30 @@ import {GoogleMapService} from '../../backend-service/google/googlemapservice';
 })
 
 export class GoogleMapsAddressSearchComponent {
-	location: Location = new Location();
 
-	googlemapservice: GoogleMapService;
 
 	@Output() public addressEvent: EventEmitter<Location> = new EventEmitter<Location>();
 
-	constructor(private googleMapService : GoogleMapService){
-		this.googlemapservice = googleMapService;
+	constructor(private googleMapService: GoogleMapService, private location: Location) {
 	}
-	
+
 	updateOnMap() {
-		window.alert('inside')
-		this.googlemapservice.findLocation(this.location);
-		window.alert('find location complete');
-		if(this.location.isGeocoded) {
-			this.fireAddressEvent();
-		}
-		else {
-			window.alert('invalid address');
-		}
+		this.geocode();
 	}
 
+	geocode() {
 
-	fireAddressEvent() {
-		this.addressEvent.emit(this.location);
+		this.googleMapService.enhanceLocationWithGeocode(this.location, (result:Location) => {
+			if (result.isGeocoded) {
+				this.addressEvent.emit(result);
+			}
+			else {
+				window.alert('invalid address');
+			}
+
+		});
+
+
 	}
 
 }
