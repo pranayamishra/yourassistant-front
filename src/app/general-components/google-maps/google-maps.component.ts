@@ -10,7 +10,7 @@ export class GoogleMapsComponent implements OnInit {
 	@Input() latitude:number;
 	@Input() longitude:number;
 	@Input() address: string;
-	zoom = 15;
+	zoom = 17;
 	constructor() { }
 
 	ngOnInit() {

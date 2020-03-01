@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {
+	Component, OnInit, ChangeDetectorRef
+} from '@angular/core';
 import { Location } from '../../../backend-service/google/location';
 
 @Component({
@@ -11,7 +13,7 @@ export class ForeignersOfficeSearchComponent implements OnInit {
 	location: Location;
 	title: string = 'Your Foreigners Office';
 
-	constructor() {
+	constructor(private changeDetectorRef: ChangeDetectorRef) {
 		this.location = new Location();
 		this.location.lat = 40.7487727;
 		this.location.lng = -73.9849336;
@@ -22,6 +24,7 @@ export class ForeignersOfficeSearchComponent implements OnInit {
 
 	setLocation(location: Location) {
 		this.location = location;
+		this.changeDetectorRef.detectChanges();
 	}
 
 }
