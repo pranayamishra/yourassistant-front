@@ -94,7 +94,9 @@ import { environment } from './environment';
 		MatTabsModule,
 		MatCardModule,
 		AgmCoreModule.forRoot({
-			apiKey: environment.googleMapApiKey
+			apiKey: environment.googleMapApiKey,
+			libraries: ['geometry', 'places'],
+			language: 'en'
 		}),
 		NgbModule
 	],

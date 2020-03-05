@@ -15,8 +15,7 @@ export class ForeignersOfficeSearchComponent implements OnInit {
 
 	constructor(private changeDetectorRef: ChangeDetectorRef) {
 		this.location = new Location();
-		this.location.lat = 40.7487727;
-		this.location.lng = -73.9849336;
+	
 	}
 
 	ngOnInit() {

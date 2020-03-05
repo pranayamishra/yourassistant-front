@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, NgZone } from '@angular/core';
+import { Component, Output, EventEmitter, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { Location } from '../../backend-service/location';
 import { MapsAPILoader, GoogleMapsAPIWrapper, AgmMap } from '@agm/core';
 
@@ -18,14 +18,25 @@ export class GoogleMapsAddressSearchComponent {
 
 	@Output() public addressEvent: EventEmitter<Location> = new EventEmitter<Location>();
 
+	@ViewChild('search', { static: true }) searchElementRef: ElementRef;
+
 	constructor(public mapsApiLoader: MapsAPILoader, private zone: NgZone, private wrapper: GoogleMapsAPIWrapper) {
 		this.mapsApiLoader = mapsApiLoader;
 		this.zone = zone;
 		this.wrapper = wrapper;
-		this.mapsApiLoader.load().then(() => {
-			this.geocoder = new google.maps.Geocoder();
-		});
 		this.location = new Location();
+	}
+
+	ngAfterViewInit() {
+		this.mapsApiLoader.load().then(() => {
+			let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement);
+			
+		});
+
+	}
+
+	findAdress() {
+
 	}
 
 	updateOnMap() {
@@ -36,7 +47,7 @@ export class GoogleMapsAddressSearchComponent {
 
 		if (!this.geocoder) this.geocoder = new google.maps.Geocoder()
 		this.geocoder.geocode({
-			'address': this.location.getFullAddress()
+			'address': this.location.suggested_address
 		}, (results, status) => {
 
 			if (status == google.maps.GeocoderStatus.OK) {
