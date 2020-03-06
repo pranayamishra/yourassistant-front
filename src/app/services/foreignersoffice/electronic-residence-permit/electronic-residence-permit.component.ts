@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectronicResidencePermitComponent implements OnInit {
 
+	    allItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:"/services/foreignersoffice"}, {name:"Electronic Residence Permit", link:""}];
+
+
   constructor() { }
 
   ngOnInit() {

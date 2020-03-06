@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BreadcrumbItem } from '../../breadcrumb/breadcrumbitem';
 
 
 @Component({
@@ -9,7 +8,7 @@ import { BreadcrumbItem } from '../../breadcrumb/breadcrumbitem';
 })
 export class ForeignersofficeComponent implements OnInit {
 
-  allItems : BreadcrumbItem[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:""}];
+  allItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:""}];
 
   constructor() { }
 

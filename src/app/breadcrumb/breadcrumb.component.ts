@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {BreadcrumbItem} from './breadcrumbitem';
 
 @Component({
 	selector: 'app-breadcrumb',

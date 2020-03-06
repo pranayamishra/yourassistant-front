@@ -11,6 +11,8 @@ export class PermanentsettlementpermitComponent implements OnInit {
 	isCollapsedDocuments: boolean = true;
 	isCollapsedTips: boolean = true;
   panelOpenState = false;
+    allItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:"/services/foreignersoffice"}, {name:"Permanent Settlement Permit", link:""}];
+
 
 	constructor() { }
 
