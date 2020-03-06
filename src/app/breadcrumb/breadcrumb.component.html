@@ -1,0 +1,19 @@
+<!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+           <ol class="breadcrumb">
+		   <li *ngFor="let item of allItems; let last = last" [ngClass]="{active : last}">
+			   <a *ngIf="item.link" routerLink="{{item.link}}">{{item.name}}</a>
+			   {{ item.link == '' ? item.name : ''}} 
+			</li>  
+          </ol>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <!-- End breadcrumb -->

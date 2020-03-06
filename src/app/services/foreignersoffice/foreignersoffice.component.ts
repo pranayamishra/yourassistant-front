@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SidebarComponent } from '../../sidebar/sidebar.component';
+import { BreadcrumbItem } from '../../breadcrumb/breadcrumbitem';
 
 
 @Component({
@@ -8,6 +8,8 @@ import { SidebarComponent } from '../../sidebar/sidebar.component';
   styleUrls: ['./foreignersoffice.component.css']
 })
 export class ForeignersofficeComponent implements OnInit {
+
+  allItems : BreadcrumbItem[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:""}];
 
   constructor() { }
 

@@ -49,6 +49,8 @@ import { GoogleMapsAddressSearchComponent } from './general-components/google-ma
 
 //environment
 import { environment } from './environment';
+import { MainAreaComponent } from './main-area/main-area.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 //
 
 @NgModule({
@@ -81,6 +83,8 @@ import { environment } from './environment';
 		AlertComponent,
 		GoogleMapsComponent,
 		GoogleMapsAddressSearchComponent,
+		MainAreaComponent,
+		BreadcrumbComponent,
 	],
 	imports: [
 		BrowserModule,

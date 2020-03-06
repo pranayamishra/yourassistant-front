@@ -29,7 +29,11 @@ export class GoogleMapsAddressSearchComponent {
 
 	ngAfterViewInit() {
 		this.mapsApiLoader.load().then(() => {
-			let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement);
+			let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+              types: ['address'],
+              componentRestrictions: {'country': 'de'}
+            });
+			
 			
 		});
 
