@@ -939,35 +939,7 @@ img {
 /*==================
  COURSES PAGE
 ====================*/
-#mu-page-breadcrumb {
-  background-color: #333;
-  display: inline;
-  float: left;
-  padding: 5px 0;
-  width: 100%;
-}
-#mu-page-breadcrumb .mu-page-breadcrumb-area {
-  display: inline;
-  float: left;
-  width: 100%;
-}
-#mu-page-breadcrumb .mu-page-breadcrumb-area h2 {
-  text-align: center;
-  color: #fff;
-}
-#mu-page-breadcrumb .mu-page-breadcrumb-area .breadcrumb {
-  background-color: transparent;
-  border-radius: 0;
-  margin-bottom: 0;
-  margin-top: 10px;
-  text-align: center;
-}
-#mu-page-breadcrumb .mu-page-breadcrumb-area .breadcrumb li {
-  color: #fff;
-}
-#mu-page-breadcrumb .mu-page-breadcrumb-area .breadcrumb li a {
-  color: #fff;
-}
+
 
 #mu-course-content {
   background-color: #f8f8f8;
