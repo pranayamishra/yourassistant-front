@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacypolicyComponent implements OnInit {
 
+		breacrumbItems: any[] = [{ name: "Home", link: "/" }, { name: "Privacy Policy", link: "" }];
+
   constructor() { }
 
   ngOnInit() {

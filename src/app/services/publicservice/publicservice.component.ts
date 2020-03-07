@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./publicservice.component.css']
 })
 export class PublicserviceComponent implements OnInit {
-	allItems: any[] = [{ name: "Home", link: "/" }, { name: "Governmental Services", link: "" }, { name: "Public Services", link: "" }];
+	breacrumbItems: any[] = [{ name: "Home", link: "/" }, { name: "Governmental Services", link: "" }, { name: "Public Services", link: "" }];
 
 
 	constructor() { }

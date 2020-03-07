@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./terms.component.css']
 })
 export class TermsComponent implements OnInit {
+		breacrumbItems: any[] = [{ name: "Home", link: "/" }, { name: "Terms and Conditions", link: "" }];
+
+
 
   constructor() { }
 

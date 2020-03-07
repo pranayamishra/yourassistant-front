@@ -13,7 +13,7 @@ export class ForeignersOfficeSearchComponent implements OnInit {
 	location: Location;
 	title: string = 'Your Foreigners Office';
 
-    allItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:"/services/foreignersoffice"}, {name:"Foreigner's Office Search", link:""}];
+    breacrumbItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Foreigner's Office", link:"/services/foreignersoffice"}, {name:"Foreigner's Office Search", link:""}];
 
 
 	constructor(private changeDetectorRef: ChangeDetectorRef) {

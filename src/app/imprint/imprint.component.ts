@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImprintComponent implements OnInit {
 
+
+		breacrumbItems: any[] = [{ name: "Home", link: "/" }, { name: "Imprint", link: "" }];
+
+
   constructor() { }
 
   ngOnInit() {

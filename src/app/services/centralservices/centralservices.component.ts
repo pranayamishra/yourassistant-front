@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CentralservicesComponent implements OnInit {
 
-  allItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Central Services", link:""}];
+  breacrumbItems : any[] = [{name:"Home", link:"/"},{name:"Governmental Services", link:""},{name:"Central Services", link:""}];
 
   constructor() { }
 
